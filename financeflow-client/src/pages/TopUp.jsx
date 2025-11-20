@@ -25,10 +25,11 @@ function TopUp() {
       }
 
       const res = await axios.post(
-        "http://localhost:5001/api/payment/create-session",
-        { amount: value, userId },
-        { headers: { Authorization: `Bearer ${token}` } }
-      );
+  "https://financeflow-server-029q.onrender.com/api/payment/create-session",
+  { amount: value, userId },
+  { headers: { Authorization: `Bearer ${token}` } }
+);
+
 
       if (res.data.url) window.location.href = res.data.url;
 
@@ -66,4 +67,5 @@ function TopUp() {
 }
 
 export default TopUp;
+
 
