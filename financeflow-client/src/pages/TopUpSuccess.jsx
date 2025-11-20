@@ -27,7 +27,7 @@ export default function TopUpSuccess() {
 
     axios
       .post(
-        "http://localhost:5001/api/payment/confirm",
+        "https://financeflow-server-029q.onrender.com/api/payment/confirm",
         { session_id },
         { headers: { Authorization: `Bearer ${token}` } }
       )
@@ -42,7 +42,6 @@ export default function TopUpSuccess() {
         console.error("Ошибка:", err);
         alert("Ошибка подтверждения оплаты");
       });
-
   }, [location, navigate]);
 
   return (
@@ -53,3 +52,4 @@ export default function TopUpSuccess() {
     </div>
   );
 }
+
