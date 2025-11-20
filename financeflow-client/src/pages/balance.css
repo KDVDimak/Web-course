@@ -1,0 +1,117 @@
+.balance-page {
+  flex: 1;
+  padding: 40px;
+  background: #0b0b12;       
+  color: white;
+  font-family: "Inter", sans-serif;
+  overflow-y: auto;
+}
+
+.balance-card-wrapper {
+  background: rgba(255,255,255,0.06);
+  padding: 35px;
+  border-radius: 22px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.45);
+  margin-bottom: 40px;
+}
+
+.balance-title {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.balance-cards {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 35px;
+}
+
+.balance-card {
+  flex: 1;
+  padding: 25px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  text-align: center;
+}
+
+.balance-card h3 {
+  font-size: 18px;
+  color: #cfcfcf;
+  margin-bottom: 10px;
+}
+
+.balance-card p {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.balance-card.income p {
+  color: #4dff4d;
+}
+
+.balance-card.expense p {
+  color: #ff4d4d;
+}
+
+.recent-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.recent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.recent-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(255,255,255,0.06);
+  border-radius: 16px;
+  padding: 14px 20px;
+
+  backdrop-filter: blur(20px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+.recent-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.green {
+  color: #4dff4d;
+  font-weight: 700;
+}
+
+.red {
+  color: #ff4d4d;
+  font-weight: 700;
+}
+
+.recent-date {
+  color: #cfcfcf;
+  opacity: 0.8;
+}
+
+@media (max-width: 800px) {
+  .balance-card-wrapper {
+    padding: 25px;
+  }
+  
+  .balance-cards {
+    flex-direction: column;
+  }
+}

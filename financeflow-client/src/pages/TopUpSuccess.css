@@ -1,0 +1,34 @@
+.success-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  background-color: #0d0d16; 
+  color: #ffffff !important;
+
+  text-align: center;
+}
+
+.success-icon {
+  font-size: 100px;
+  margin-bottom: 20px;
+  color: #4caf50;
+  animation: pop 0.4s ease-out;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.3); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 20px;
+  opacity: 0.8;
+}

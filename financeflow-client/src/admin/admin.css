@@ -1,0 +1,115 @@
+/* financeflow-client/src/admin/admin.css */
+
+/* ----------------------- */
+/* Общие стили страниц админа */
+/* ----------------------- */
+.admin-page {
+  padding: 32px;
+  color: #fff;
+}
+
+.admin-title {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.admin-subtitle {
+  opacity: 0.75;
+  margin-bottom: 28px;
+  font-size: 15px;
+}
+
+/* ----------------------- */
+/* Карточки "Пользователи", "Транзакции" */
+/* ----------------------- */
+.admin-cards {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 26px;
+}
+
+.admin-card {
+  padding: 18px 26px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #7c4dff, #a56bff);
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55);
+}
+
+/* ----------------------- */
+/* Таблицы */
+/* ----------------------- */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  background: #14151f;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.admin-table th {
+  text-align: left;
+  font-weight: 700;
+  font-size: 14px;
+  color: #dcdcdc;
+}
+
+.admin-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.admin-empty {
+  text-align: center;
+  padding: 24px 0;
+  opacity: 0.6;
+}
+
+/* ----------------------- */
+/* Красивая кнопка удаления */
+/* ----------------------- */
+.delete-btn,
+.admin-delete-btn {
+  padding: 8px 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: #ff4d4d;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+
+  transition:
+    background 0.25s ease,
+    transform 0.15s ease,
+    box-shadow 0.25s ease;
+}
+
+.delete-btn:hover,
+.admin-delete-btn:hover {
+  background: #ff3333;
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(255, 80, 80, 0.55);
+}
+
+.delete-btn:active,
+.admin-delete-btn:active {
+  transform: scale(0.9);
+  background: #cc0000;
+  box-shadow: 0 0 18px rgba(255, 60, 60, 0.7);
+}

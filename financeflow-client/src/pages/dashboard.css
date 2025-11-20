@@ -1,0 +1,313 @@
+* {
+  transition: background 0.25s, color 0.25s, border 0.25s;
+  box-sizing: border-box;
+}
+
+.dashboard-wrapper {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: "Inter", sans-serif;
+}
+
+.sidebar {
+  width: 260px;
+  background: var(--card);
+  backdrop-filter: blur(15px);
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(0,0,0,0.1);
+}
+
+.sidebar-title {
+  font-size: 28px;
+  font-weight: 900;
+  margin-bottom: 25px;
+  text-align: center;
+  color: var(--text);
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: auto;
+}
+
+.menu-item {
+  padding: 12px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s;
+  font-size: 16px;
+  color: var(--text-secondary);
+}
+
+.menu-item:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+.menu-item.active {
+  background: var(--accent);
+  color: white;
+  font-weight: 700;
+}
+
+.logout-btn {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  background: var(--expense);
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  color: white;
+  transition: 0.25s;
+}
+
+.logout-btn:hover {
+  filter: brightness(1.15);
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+.dashboard-card {
+  background: var(--card);
+  backdrop-filter: blur(20px);
+  padding: 40px;
+  border-radius: 22px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+  color: var(--text);
+}
+
+.dash-title {
+  font-size: 34px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+.dash-subtitle {
+  color: var(--text-secondary);
+  margin-bottom: 35px;
+  font-size: 18px;
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  padding: 25px;
+  border-radius: 16px;
+  background: var(--card);
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  color: var(--text);
+}
+
+.stat-card h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.stat-card .value {
+  font-size: 26px;
+  font-weight: 900;
+}
+
+.income-card .value {
+  color: var(--income);
+}
+
+.expense-card .value {
+  color: var(--expense);
+}
+
+.balance-card .value {
+  color: var(--accent);
+}
+
+.filters-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.filters-row select {
+  flex: 1;
+
+  padding: 14px 18px;
+
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 14px;
+
+  backdrop-filter: blur(12px);
+
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 500;
+
+  outline: none;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.filters-row select:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+.filters-row select:focus {
+  border-color: var(--accent);
+  background: rgba(255,255,255,0.18);
+}
+
+.transactions-table {
+  margin-top: 30px;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.transactions-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+  border-radius: 14px;
+  overflow: hidden;
+  color: var(--text);
+}
+
+.transactions-table th {
+  padding: 14px;
+  background: rgba(255,255,255,0.12);
+  text-align: left;
+  font-size: 16px;
+  color: var(--text);
+}
+
+.transactions-table td {
+  padding: 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.transactions-table tr:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.green {
+  color: var(--income);
+  font-weight: 700;
+}
+
+.red {
+  color: var(--expense);
+  font-weight: 700;
+}
+
+.empty-row {
+  text-align: center;
+  padding: 20px;
+  color: var(--text-secondary);
+}
+
+.charts-row {
+  display: flex;
+  gap: 25px;
+  margin-top: 40px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.chart-left,
+.chart-right {
+  flex: 1;
+  padding: 25px;
+  background: var(--card);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+  overflow: hidden;
+}
+
+.chart-left canvas,
+.chart-right canvas {
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .stats-row {
+    grid-template-columns: 1fr;
+  }
+
+  .filters-row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1150px) {
+  .charts-row {
+    flex-direction: column;
+  }
+}
+
+.charts-row {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+}
+
+/* Основной контейнер графиков */
+.chart-card {
+  background: radial-gradient(
+      circle at 20% 20%,
+      rgba(140, 92, 255, 0.18),
+      rgba(17, 17, 25, 0.95)
+  );
+  border-radius: 26px;
+  padding: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  /* мягкая глубина */
+  box-shadow:
+    0 22px 45px rgba(0,0,0,0.85),
+    inset 0 0 20px rgba(255,255,255,0.02);
+
+  transition: 0.25s ease;
+}
+
+/* Premium hover */
+.chart-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 28px 60px rgba(0,0,0,0.95),
+    inset 0 0 22px rgba(255,255,255,0.04);
+  border-color: rgba(170, 130, 255, 0.5);
+}
+
+/* Сглаживаем сам график */
+.chart-card canvas,
+.chart-card svg {
+  border-radius: 16px;
+}

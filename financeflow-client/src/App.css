@@ -1,0 +1,25 @@
+/* Общий layout */
+.app-layout {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Sidebar — правильный класc, совпадает с Sidebar.jsx */
+.sidebar {
+    width: 220px;
+    background: #0f0f19;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+}
+
+/* Контент смещаем вправо */
+.content {
+    margin-left: 220px;
+    width: calc(100% - 220px);
+    padding: 20px;
+}

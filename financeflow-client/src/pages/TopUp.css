@@ -1,0 +1,73 @@
+.topup-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 40px;
+  background: var(--bg);
+}
+
+.topup-card {
+    width: 450px;
+    padding: 35px;
+    margin: 40px auto;
+    background: #151521;
+    border-radius: 20px;
+
+    box-shadow: 
+        0 0 40px rgba(123, 60, 255, 0.15),
+        inset 0 0 20px rgba(255, 255, 255, 0.02);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    text-align: center;
+}
+
+
+.topup-title {
+  font-size: 26px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  color: var(--text);
+}
+
+.topup-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+
+  background: var(--card); 
+  color: var(--text);
+
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.25);
+  outline: none;
+  font-size: 18px;
+  text-align: center;
+}
+
+.topup-card button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 14px 18px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+
+    background: linear-gradient(90deg, #8a5cff, #b37dff);
+    color: #fff;
+
+    font-size: 17px;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.topup-card button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(138, 92, 255, 0.35);
+}
+
+.topup-card button:disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}

@@ -1,0 +1,83 @@
+.incomes-wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background: #0b0b12;
+  color: white;
+}
+
+.incomes-content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+
+  font-family: "Inter", sans-serif;
+}
+
+.incomes-card {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 35px;
+  border-radius: 22px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #cfcfcf;
+  margin-bottom: 25px;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.incomes-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255,255,255,0.05);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.incomes-table th {
+  background: rgba(255,255,255,0.12);
+  padding: 14px;
+  text-align: left;
+}
+
+.incomes-table td {
+  padding: 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.incomes-table tr:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.green {
+  color: #4dff4d;
+  font-weight: 700;
+}
+
+.empty {
+  padding: 20px;
+  text-align: center;
+  color: #aaa;
+}
+
+@media (max-width: 800px) {
+  .incomes-card {
+    padding: 25px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+}

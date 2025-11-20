@@ -1,0 +1,58 @@
+.expenses-wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+}
+
+.expenses-content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+.expenses-card {
+  background: var(--card);
+  padding: 35px;
+  border-radius: 22px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 25px;
+  color: var(--text);
+}
+
+.expenses-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.expenses-table th {
+  background: rgba(0, 0, 0, 0.04);
+  padding: 14px;
+  text-align: left;
+  color: var(--text);
+}
+
+.expenses-table td {
+  padding: 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  color: var(--text);
+}
+
+.red {
+  color: var(--expense);
+  font-weight: 700;
+}
+
+.empty {
+  text-align: center;
+  padding: 20px;
+  color: var(--text-secondary);
+}
