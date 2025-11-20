@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Sidebar from "../components/Sidebar";
-import "./topup.css";
+import './TopUp.css';
 
 function TopUp() {
   const [amount, setAmount] = useState("");
@@ -66,3 +66,4 @@ function TopUp() {
 }
 
 export default TopUp;
+
